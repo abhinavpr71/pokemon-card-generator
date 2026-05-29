@@ -1,0 +1,97 @@
+*{
+    box-sizing: border-box;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+
+    gap: 10px;
+    padding: 20px 50px;
+    border-radius: 0px 0px 10px 10px;
+
+    background-color: rgba(24, 24, 26, 1);
+    border: 2px solid rgb(50, 53, 66;)
+}
+
+.signUp{
+    text-decoration: none;
+    color:rgb(4, 4, 81);
+
+    font-weight: bold;
+    background-color: azure;
+     
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+.login{
+    text-decoration: none;
+    color: white;
+
+    font-weight: bold;
+    background-color: rgb(4, 4, 81);
+     
+    padding: 7px 10px;
+    border-radius: 5px;
+}
+
+.search-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 90px;
+}
+
+.search-section__controls{
+    display: flex;
+    gap: 3px;
+}
+
+#pokemonInput{
+    width: 100;
+    max-width: 400px;
+    padding: 6px;
+    border-radius: 6px;
+    border: 0.5px solid gray;
+}
+
+.search-section__button{
+    padding: 4px 13px;
+    border-radius: 4px;
+}
+
+#pokemonSprite{
+    width:200px;
+}
+
+
+.pokemon-app{
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+
+    background-color: white;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 7px;
+}
+
+.pokemon-app__data-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    max-width: 300px;
+
+    background-color: white;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+}

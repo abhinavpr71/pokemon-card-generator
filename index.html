@@ -1,29 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>pokecard generator</title>
-    <link rel="stylesheet" href="style.css">
-     <script src="app.js" defer></script>
-</head>
-<body>
-    <nav>
-
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <nav class="navbar">
+        <a href="#" class="signUp">Sign-up</a>
+        <a href="#" class="login">Login</a>
     </nav>
 
-    <div>
-        <h1>Find Your Pokemon & Create Cool pokeCard </h1>
-        <input type="text" placeholder="Find your pokemon" id="pokemonInput">
-        <button onclick="searchPokemon()">Search</button><br>
-    </div>
-    
+    <div class="search-section">
+      <h1 class="search-section__title">
+        Find Your Pokemon & Create Cool pokeCard
+      </h1>
 
-    <div class="main">
-         <img src="" alt="pokemon Sprite" id="pokemonSprite" style="display: none;">
-        <div>
-            <div id="pokemonDetails"></div>
-        </div>
+      <div class="search-section__controls">
+        <input
+          type="text"
+          placeholder="Find your pokemon"
+          id="pokemonInput"
+        /><br />
+
+        <button class="search-section__button" onclick="searchPokemon()">
+          Search</button
+        ><br />
+      </div>
     </div>
-</body>
+
+    <div class="pokemon-app">
+
+      <div class="pokemon-app__data-card">
+        <div class="data-card__image">
+          <img
+            src=""
+            alt="pokemon Sprite"
+            id="pokemonSprite"
+            style="display: none"
+          />
+        </div>
+        <div id="pokemonDetails"></div>
+      </div>
+
+      <div class="pokemon-app__actions">
+        <button class="pokemon-app__generate-btn">Generate Pokemon Card</button>
+      </div>
+
+      <div class="pokemon-app__ai-card"></div>
+    </div>
+  </body>
 </html>
