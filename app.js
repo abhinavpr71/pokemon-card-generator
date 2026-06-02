@@ -14,7 +14,7 @@ async function searchPokemon() {
   pokemonData = data;
 
   // IMAGE data
-  const image = data.sprites.front_default;
+  const image = data.sprites.other.home.front_default;
 
   const imageElement = document.getElementById("pokemonSprite");
   imageElement.src = image;
@@ -23,42 +23,40 @@ async function searchPokemon() {
   const name = data.name;
   const height = data.height;
   const weight = data.weight;
-  const type1 = data.types[0].type.name;
-  const type2 = data.types[1]?.type.name || "";
+  
+  //Type
+  const type = data.types.map(item => item.type.name).join(" , ")
 
   //Abilities data
-  const ability1 = data.abilities[0].ability.name;
-  const ability2 = data.abilities[1]?.ability.name;
-  const ability3 = data.abilities[2]?.ability.name;
+  const abilities = data.abilities.map(item => item.ability.name).join(" , ")
 
   // Data : type, name, height, weight
   document.getElementById("pokemonDetails").innerHTML =
     `<div class="pokemonInformation">
       <h2>Name : ${name}</h2>
-      <P>Primary Type : ${type1} </p>
-      <P>Secondary Type : ${type2}</P>
+      <P>Type : ${type} </p>
       <p>Height :${height}</p>
       <p>Weight : ${weight}</p>
-      <p>Abilities : ${ability1} , ${ability2} , ${ability3}</P>
+      <p>Abilities : ${abilities}</P>
    </div>`;
 
   document.getElementById("pokemonInput").value = "";
 }
 
-
-function generateCard(){
+function generateCard() {
+  console.log(pokemonData);
   document.getElementById("pokemon-app__ai-card").innerHTML = `
   <div class="pokemonAiCard">
 
-  <img src="${pokemonData.sprites.front_default}">
+  <img class="aiGeneratedCardImg" src="${pokemonData.sprites.other.dream_world.front_default}">
   
   <h2>${pokemonData.name}</h2>
 
-  <p>${pokemonData.types[0].type.name}</P>
+  <p>${pokemonData.types[0].type.name}/${pokemonData.types[1]?.type.name}</P>
 
   <P>A powerful pokemon known for its ${pokemonData.abilities[0].ability.name} ability.</P>
   
   
-  </div>`
-  
+  </div>`;
+
 }

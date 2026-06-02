@@ -127,18 +127,7 @@
     border-radius: 6px;
 }
 
-#pokemon-app__ai-card{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
 
-    width: 400px;
-
-    background-color: white;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.9);
-    border-radius: 10px; 
-}
 
 .pokemon-app__actions{
     margin-top: 19px;
@@ -155,12 +144,42 @@
  border-radius: 7px;
 }
 
+
+#pokemon-app__ai-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 350px;
+
+    background-color: white;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.9);
+    border-radius: 16px; 
+
+    margin-left: 10px;
+}
+
+
 .pokemonAiCard{
-    width: 300px;
+    width: 350px;
     padding: 20px;
     border-radius: 16px;
-    border: 2px solid gold;
+    border: 5px solid gold;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
  
     text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+
+    background-color: black;
+}
+
+.aiGeneratedCardImg{
+    background-color: azure;
+    box-shadow:0px 2px 10px rgba(0, 0, 0, 0.9);
+
+   width: 250px ;
+   height: 250px;
+   border-radius: 6px;
 }
